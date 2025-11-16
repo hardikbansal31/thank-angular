@@ -1,0 +1,22 @@
+<div class="thank-you-wrapper">
+  <div class="card">
+    <h1>Thank you!</h1>
+    <p>We’ve received your application.</p>
+
+    @if (name) {
+    <p>Hi {{ name }}, thanks for applying.</p>
+    }
+
+    <div class="actions">
+      <button (click)="goHome()" class="btn">Go to Home</button>
+      <button (click)="sendResumeEmail()" class="btn outline">Email Team</button>
+      <a class="btn link" href="https://github.com/your-username" target="_blank" rel="noopener">
+        View my GitHub
+      </a>
+    </div>
+
+    <small class="note">
+      Tip: Attach your resume to the email that opens, or upload it where requested.
+    </small>
+  </div>
+</div>
