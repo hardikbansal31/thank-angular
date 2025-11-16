@@ -1,59 +1,62 @@
-# ThankYouApp
+Thank You Page – Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.10.
+This is a simple Angular application that displays a Thank You page.
+The project was created using the latest Angular (standalone components + modern routing).
 
-## Development server
+Features
 
-To start a local development server, run:
+Minimal Angular setup
 
-```bash
+Standalone ThankYouComponent
+
+Clean routing (Thank You page set as the home page)
+
+Compatible with Angular v17+
+
+Runs on Windows 11 Node.js environment
+
+Project Structure
+src/
+ ├── app/
+ │    ├── pages/
+ │    │     └── thank-you/
+ │    │            ├── thank-you.component.ts
+ │    │            ├── thank-you.component.html
+ │    │            └── thank-you.component.css
+ │    ├── app.routes.ts
+ │    ├── app.config.ts
+ │    └── app.component.html
+ └── main.ts
+
+How to Run the Project
+1. Install dependencies
+npm install
+
+2. Start the development server
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+3. Open the app in a browser
+http://localhost:4200/
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+You should see the Thank You page as the home page.
 
-```bash
-ng generate component component-name
-```
+Routing
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+The app uses Angular’s standalone routing.
 
-```bash
-ng generate --help
-```
+Routes are defined in app.routes.ts:
 
-## Building
+{ path: '', component: ThankYouComponent },
+{ path: 'thank-you', component: ThankYouComponent },
+{ path: '**', redirectTo: '' }
 
-To build the project run:
+Technologies Used
 
-```bash
-ng build
-```
+Angular 17+
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+TypeScript
 
-## Running unit tests
+Standalone components
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Vite-based Angular dev server (Angular CLI)
