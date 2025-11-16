@@ -1,60 +1,94 @@
 Thank You Angular App
-A simple and minimal Angular application that displays a centered "Thank You" message.
+
+A minimal, lightweight Angular application built for a simple assignment requirement:
+display a clean, centered "Thank You" page using Angular (v17+ standalone).
+
+This project focuses on clarity, correctness, and simplicity — no unnecessary files, no extra modules.
 
 🚀 Features
-Minimal Angular setup (standalone)
 
-One reusable ThankYouComponent
+✔ Single Thank You page
+Clean UI with a centered message.
 
-Clean, centered layout using CSS
+✔ Angular Standalone Components
+No NgModule usage — modern Angular setup.
 
-Easy to extend and integrate into other projects
+✔ Simple routing
+Root path (/) loads the Thank You component directly.
 
-🛠️ Getting Started
-Follow these instructions to get a copy of the project up and running on your local machine.
+✔ Ready for GitHub Pages deployment
+Build + deploy steps included.
+```
+🗂 Project Structure
+thank-you-app/
+├── README.md
+├── angular.json
+├── package.json
+└── src/
+    ├── main.ts
+    └── app/
+        ├── app.routes.ts
+        └── pages/
+            └── thank-you/
+                ├── thank-you.component.ts
+                ├── thank-you.component.html
+                └── thank-you.component.css
+```
+🔧 Installation
 
-Prerequisites
-Make sure you have the following software installed on your system (Windows 11):
-
-Node.js: Download and install from nodejs.org (which includes npm).
-
-Angular CLI: Install globally using npm:
-
-
-npm install -g @angular/cli
-Installation & Usage
-Clone the repository (or download the files) and navigate into the project directory.
-
-
-# git clone https://your-repo-url/thank-you-app.git
-cd thank-you-app
-Install dependencies: Run this command in the project's root folder to install all the required packages.
-
+Install dependencies:
 
 npm install
-Run the development server: This command compiles the app and hosts it locally.
 
+
+Run the development server:
 
 ng serve
-View the application: Open your browser and navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
-📦 Project Structure
-Here is the basic structure of the application source:
 
-thank-you-app/
-├── src/
-│   ├── app/
-│   │   ├── components/
-│   │   │   └── thank-you/
-│   │   │       ├── thank-you.component.css     (Styles)
-│   │   │       ├── thank-you.component.html    (Template)
-│   │   │       └── thank-you.component.ts      (Logic)
-│   │   └── app.routes.ts                       (Routing)
-│   └── main.ts                                 (App entry point)
-├── package.json
-├── angular.json
-└── README.md
-📦 Build
-Run ng build to build the project. The build artifacts will be stored in the dist/thank-you-app/ directory. This creates a production-ready version of your application.
+Open the app at:
 
-ng build
+http://localhost:4200/
+
+▶️ Build & Deploy to GitHub Pages
+
+Build the production bundle:
+
+ng build --output-path dist/thank-you-app --base-href /thank-angular/
+
+
+Deploy using the Angular GitHub Pages tool:
+
+npx angular-cli-ghpages --dir=dist/thank-you-app
+
+
+Then enable GitHub Pages:
+
+Repo → Settings → Pages → Branch: gh-pages
+
+
+Your hosted URL will be:
+
+https://<your-username>.github.io/thank-angular/
+
+🎨 Component Overview
+
+thank-you.component.html
+
+<div class="container">
+  <h1>Thank You!</h1>
+  <p>Your submission has been received.</p>
+</div>
+
+
+thank-you.component.css
+
+.container {
+  text-align: center;
+  margin-top: 120px;
+  font-family: Arial, sans-serif;
+}
+
+📄 License
+
+Free to use and modify.
